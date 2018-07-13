@@ -6,8 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b278ffdb-2f3c-4fe6-a840-bc0a7125104a" name="Default" comment="增加校验位">
+    <list default="true" id="b278ffdb-2f3c-4fe6-a840-bc0a7125104a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MituServer/web/WEB-INF/classes/AnswerRequest.class" afterPath="$PROJECT_DIR$/../MituServer/web/WEB-INF/classes/AnswerRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MituServer/web/WEB-INF/classes/Controller/UserDAO.class" afterPath="$PROJECT_DIR$/../MituServer/web/WEB-INF/classes/Controller/UserDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MituServer/web/WEB-INF/classes/GA/UserController.class" afterPath="$PROJECT_DIR$/../MituServer/web/WEB-INF/classes/GA/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MituServer/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MituServer/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MituServer/src/AnswerRequest.java" afterPath="$PROJECT_DIR$/../MituServer/src/AnswerRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../MituServer/src/GA/Controller.java" afterPath="$PROJECT_DIR$/../MituServer/src/GA/Controller.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../MituServer/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +48,8 @@
       <file leaf-file-name="DAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../MituServer/src/Controller/DAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#queryRouteTime#0;class#DAO#0" expanded="false" />
@@ -63,20 +68,11 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../MituServer/src/GA/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="78" column="44" lean-forward="true" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnswerRequest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../MituServer/src/AnswerRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="77" column="15" lean-forward="true" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+            <state relative-caret-position="782">
+              <caret line="138" column="71" lean-forward="true" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3217#3225#0" expanded="true" />
+                <element signature="e#3280#3288#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,22 +81,40 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../MituServer/src/GA/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="368">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnswerRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../MituServer/src/AnswerRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="102" column="13" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
               <folding>
-                <marker date="1531466057454" expanded="true" signature="2146:2153" ph="{...}" />
-                <marker date="1531466057454" expanded="true" signature="2199:2315" ph="{...}" />
-                <marker date="1531466057454" expanded="true" signature="2358:2465" ph="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DefaultMBeanServerInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../JRE/src.zip!/com/sun/jmx/interceptor/DefaultMBeanServerInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="818" column="0" lean-forward="false" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../MituServer/src/Controller/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="60" column="49" lean-forward="true" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+            <state relative-caret-position="253">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <marker date="1531466057453" expanded="true" signature="1337:1396" ph="select uid f... Collection" />
                 <marker date="1531466057453" expanded="true" signature="1928:1984" ph="select uid f... History" />
@@ -140,15 +154,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routedbitem" pinned="false" current-in-tab="false">
-        <entry file="das://table:/6b71c5d6/50b8ee48-fe41-4790-a841-e3c9b5236695/mituDB.routedbitem">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Evaluation" pinned="false" current-in-tab="false">
         <entry file="das://table:/6b71c5d6/50b8ee48-fe41-4790-a841-e3c9b5236695/mituDB.Evaluation">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -158,11 +163,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="context.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../MituServer/web/META-INF/context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+            <state relative-caret-position="207">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -210,11 +215,11 @@
         <option value="$PROJECT_DIR$/../MituServer/src/GA/Wheel.java" />
         <option value="$PROJECT_DIR$/../MituServer/web/WEB-INF/context.fxml" />
         <option value="$PROJECT_DIR$/../MituServer/MituServer.iml" />
-        <option value="$PROJECT_DIR$/../MituServer/src/GA/Controller.java" />
         <option value="$PROJECT_DIR$/../MituServer/src/Controller/DAO.java" />
         <option value="$PROJECT_DIR$/../MituServer/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/../MituServer/web/META-INF/context.xml" />
+        <option value="$PROJECT_DIR$/../MituServer/src/GA/Controller.java" />
         <option value="$PROJECT_DIR$/../MituServer/src/AnswerRequest.java" />
+        <option value="$PROJECT_DIR$/../MituServer/web/META-INF/context.xml" />
       </list>
     </option>
   </component>
@@ -266,23 +271,6 @@
             <path>
               <item name="MituServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="MituServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MituServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MituServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MituServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MituServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MituServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MituServer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GA" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MituServer" type="b2602c69:ProjectViewProjectNode" />
@@ -699,7 +687,7 @@
       <workItem from="1531355171580" duration="3741000" />
       <workItem from="1531377015317" duration="4883000" />
       <workItem from="1531386828257" duration="256000" />
-      <workItem from="1531442685870" duration="5253000" />
+      <workItem from="1531442685870" duration="9939000" />
     </task>
     <task id="LOCAL-00001" summary="增加校验位">
       <created>1531466017446</created>
@@ -708,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531466017447</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加校验位">
+      <created>1531466231415</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1531466231415</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97772000" />
+    <option name="totallyTimeSpent" value="102458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -724,17 +719,17 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4415011" sideWeight="0.1421875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4415011" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289183" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4415011" sideWeight="0.8578125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.8865132" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.11348684" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.8833992" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1171875" sideWeight="0.11660079" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15625" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -766,14 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../MituServer/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../MituServer/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1059,14 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../MituServer/web/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../MituServer/src/GA/Consoler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-378">
@@ -1077,28 +1056,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../MituServer/src/GA/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <marker date="1531466057454" expanded="true" signature="2146:2153" ph="{...}" />
-            <marker date="1531466057454" expanded="true" signature="2199:2315" ph="{...}" />
-            <marker date="1531466057454" expanded="true" signature="2358:2465" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MituServer/src/GA/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="78" column="44" lean-forward="true" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+        <state relative-caret-position="368">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../MituServer/src/Controller/DAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#queryRouteTime#0;class#DAO#0" expanded="false" />
@@ -1120,20 +1087,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../MituServer/src/AnswerRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="77" column="15" lean-forward="true" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../MituServer/src/Controller/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="60" column="49" lean-forward="true" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+        <state relative-caret-position="253">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <marker date="1531466057453" expanded="true" signature="1337:1396" ph="select uid f... Collection" />
             <marker date="1531466057453" expanded="true" signature="1928:1984" ph="select uid f... History" />
@@ -1160,6 +1117,43 @@
             <marker date="1531466057453" expanded="true" signature="12471:12541" ph="insert into History... " />
             <marker date="1531466057453" expanded="true" signature="12908:12992" ph="insert into Route... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MituServer/src/GA/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="138" column="71" lean-forward="true" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
+          <folding>
+            <element signature="e#3217#3225#0" expanded="true" />
+            <element signature="e#3280#3288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MituServer/src/AnswerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="102" column="13" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../JRE/src.zip!/com/sun/jmx/interceptor/DefaultMBeanServerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="818" column="0" lean-forward="false" selection-start-line="818" selection-start-column="0" selection-end-line="818" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MituServer/web/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

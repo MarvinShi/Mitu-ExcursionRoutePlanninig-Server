@@ -86,6 +86,9 @@ public class Controller {
         ArrayList<Integer> poiID = new ArrayList<Integer>();
         ArrayList<ArrayList> routeList = new ArrayList<ArrayList>();
         ArrayList<Integer> idResultList = new ArrayList<Integer>();
+        ArrayList<Double> TimeList = new ArrayList<Double>();
+        ArrayList<Double> MoneyList = new ArrayList<Double>();
+        ArrayList<ArrayList> totalList=new ArrayList<>();
         double totaltime = 0;
 
         int totalcost = 0;
@@ -125,15 +128,30 @@ public class Controller {
 //        resultList.add(1);
 //        resultList.add(0,0);
             //找到resultList里面的所有的本来数据库的id
+            double routeTime=poi_way_Tcost[0][resultList.get(0)];
+            double routeMoney=poi_way_Mcost[0][resultList.get(0)];
+            for(int temp=0;temp<resultList.size();temp++)
+                {
+                routeTime+=poi_way_Tcost[resultList.get(temp)][resultList.get(temp+1)];
+                routeMoney+=poi_way_Mcost[resultList.get(temp)][resultList.get(temp+1)];
+            }
+            routeTime+=poi_way_Tcost[1][resultList.get(resultList.size()-1)];
+            routeMoney+=poi_way_Mcost[1][resultList.get(resultList.size()-1)];
             for(int temp=0;temp<resultList.size();temp++)
             {
                 idResultList.add(poiId[resultList.get(temp)-2]);
             }
+            MoneyList.add(routeMoney);
+            TimeList.add(routeTime);
             routeList.add(idResultList);
             poiID.clear();
+            idResultList.clear();
         }
 //结果写到了routeList 里面包含五条route,不包含起点和终点
-        return routeList;
+        totalList.add(MoneyList);
+        totalList.add(TimeList);
+        totalList.add(routeList);
+        return totalList;
     }
 
     private  void arrangementSelect(ArrayList<Integer> dataList, ArrayList<Integer>tmpResultList, int resultIndex ,ArrayList<Integer> resultList,double resultTime[]) {

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import GA.Controller;
 import GA.UserController;
+import Controller.UserDAO;
 
 
 @WebServlet("/AnswerRequest")
@@ -80,16 +81,25 @@ public class AnswerRequest extends HttpServlet {
             String totalPOI = request.getParameter("poi");
             //  将totalPOI用空格进行切割
             Controller GAController = new Controller(pointSize, exTime, exMoney, stTime, stMoney, totalPOI);
-            ArrayList<ArrayList> routeList = GAController.response();
+            ArrayList<ArrayList> totalList = GAController.response();
+            ArrayList<Double> moneyList=totalList.get(0);
+            ArrayList<Double> timeList=totalList.get(1);
+            ArrayList<ArrayList> routeList=totalList.get(2);
             String resString = "";
+            String TotalresString = "";
+            UserDAO checkDao=new UserDAO();
+
             //       System.out.println("2222211111111222222222");
             for (int i = 0; i < routeList.size(); i++) {
                 ArrayList<Integer> idListOfRoute = routeList.get(i);
                 for (int j = 0; j < idListOfRoute.size(); j++) {
                     resString = resString + idListOfRoute.get(j) + "+";
                 }
-
-                resString = resString + "#";
+                int checkC=checkDao.getCheckC(uid,startPoint,endPoint,resString);          //存在是1，不存在是0
+                int checkH=checkDao.getCheckC(uid,startPoint,endPoint,resString);
+                double money=moneyList.get(i);
+                double time=timeList.get(i);
+                TotalresString = TotalresString +" "+time+""+money+" "+checkH+" "+checkC+"#";
             }
             PrintWriter out = response.getWriter();
             out.write(resString);
