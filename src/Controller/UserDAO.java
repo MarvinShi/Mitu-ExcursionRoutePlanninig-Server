@@ -36,6 +36,43 @@ public class UserDAO {
         }
     }
 
+    public int getCheckC(int uid,String startPoi,String endPoi,String routeInfo)
+    {
+        int checkC=0;
+        int routeId = getRouteID(startPoi,endPoi,routeInfo);
+        String queryCheckSql = "select uid from Collection where uid ="+uid+" and routeID ="+routeId;
+        try {
+            ResultSet rs = stmt.executeQuery(queryCheckSql);
+            while(rs.next()){
+                checkC = rs.getInt("uid");
+                }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(checkC!=0)
+            return 1;
+        else return 0;
+
+    }
+
+    public int getCheckH(int uid,String startPoi,String endPoi,String routeInfo)
+    {
+        int checkH=0;
+        int routeId = getRouteID(startPoi,endPoi,routeInfo);
+        String queryCheckSql = "select uid from History where uid ="+uid+" and routeID ="+routeId;
+        try {
+            ResultSet rs = stmt.executeQuery(queryCheckSql);
+            while(rs.next()){
+                checkH = rs.getInt("uid");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(checkH!=0)
+            return 1;
+        else return 0;
+    }
+
     public int getUid(String userID,String password) {
         int uid = -1;
         String queryUidSql = "select uid from User where UserID='"+userID+"' and Password ='"+ password +"'";
@@ -116,13 +153,20 @@ public class UserDAO {
     public String getCollection(int uid)
     {
         String  cRoute = null;
-        String queryUserNameSql = "select RouteID,StartPoi,EndPoi,RouteInfo from Collection natural join Route natural join PoiRoute where uid="+uid;
+        String queryUserNameSql = "select RouteID,StartPoi,EndPoi,RouteInfo,TotalTime,TotalMoney from Collection natural join Route natural join PoiRoute where uid="+uid;
         try {
             ResultSet rs = stmt.executeQuery(queryUserNameSql);
             while(rs.next()){
+                int checkH,checkC;
+                checkC=1;
+                checkH=0;
+                ResultSet hr=stmt.executeQuery("select uid from History where uid="+uid+" and RouteID="+rs.getString("RouteID"));
+                checkC = hr.getInt("uid");
+                if(checkH!=0)
+                    checkH=1;
                 if(cRoute!=null)
-                cRoute= cRoute+rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+"#";
-                else cRoute=rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+"#";
+                cRoute= cRoute+rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+" "+rs.getString("TotalTime")+" "+rs.getString("TotalMoney")+" "+checkC+" "+checkH+"#";
+                else cRoute=rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+" "+rs.getString("TotalTime")+" "+rs.getString("TotalMoney")+" "+checkC+" "+checkH+"#";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -133,13 +177,20 @@ public class UserDAO {
     public String getHistory(int uid)
     {
         String  hRoute = null;
-        String queryUserNameSql = "select RouteID,StartPoi,EndPoi,RouteInfo from Histroy natural join Route natural join PoiRoute where uid="+uid;
+        String queryUserNameSql = "select RouteID,StartPoi,EndPoi,RouteInfo,TotalTime,TotalMoney from Histroy natural join Route natural join PoiRoute where uid="+uid;
         try {
             ResultSet rs = stmt.executeQuery(queryUserNameSql);
             while(rs.next()){
+                int checkH,checkC;
+                checkC=0;
+                checkH=1;
+                ResultSet cr=stmt.executeQuery("select uid from Collection where uid="+uid+" and RouteID="+rs.getString("RouteID"));
+                checkC = cr.getInt("uid");
+                if(checkC!=0)
+                    checkC=1;
                 if(hRoute!=null)
-                hRoute= hRoute+rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+"#";
-                else hRoute= rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+"#";
+                hRoute= hRoute+rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+" "+rs.getString("TotalTime")+" "+rs.getString("TotalMoney")+" "+checkC+" "+checkH+"#";
+                else hRoute= rs.getString("RouteID")+" "+rs.getString("StartPoi")+" "+rs.getString("EndPoi")+" "+rs.getString("RouteInfo")+" "+rs.getString("TotalTime")+" "+rs.getString("TotalMoney")+" "+checkC+" "+checkH+"#";
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -218,7 +269,7 @@ public class UserDAO {
         return -1;
     }
 
-    public int setNewRoute(int poiID,String startPoi,String endPoi)
+    public int setNewRoute(int poiID,String startPoi,String endPoi,String totalTime,String totalMoney)
     {
         int res =0;
         int check=0;
@@ -232,7 +283,7 @@ public class UserDAO {
             e.printStackTrace();
         }
         if(check==0) {
-            String setNewRouteSql = "insert into Route (PoiID,StartPoi,EndPoi) values (" + poiID + ",'" + startPoi + "','" + endPoi + "')";
+            String setNewRouteSql = "insert into Route (PoiID,StartPoi,EndPoi,TotalTime,TotalMoney) values (" + poiID + ",'" + startPoi + "','" + endPoi +"',"+ totalTime +","+totalMoney+")";
             try {
                 res = stmt.executeUpdate(setNewRouteSql);
             } catch (SQLException e) {

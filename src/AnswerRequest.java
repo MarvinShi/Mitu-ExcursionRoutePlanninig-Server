@@ -18,7 +18,7 @@ import GA.UserController;
 public class AnswerRequest extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private int hitCount;
-    private int uid=1;
+    private int uid=0;
     public void init()
     {
     }
@@ -124,9 +124,11 @@ public class AnswerRequest extends HttpServlet {
                 String acStart =request.getParameter("startPoi");
                 String acEnd = request.getParameter("endPoi");
                 String acRoute = request.getParameter("routeInfo");
-                String addCollation = acStart+" "+acEnd+" "+acRoute;
+                String acTotalTime = request.getParameter("totalTime");
+                String acTotalMoney = request.getParameter("totalMoney");
+                String addCollation = acStart+" "+acEnd+" "+acRoute+" "+acTotalTime+" "+acTotalMoney;
                 PrintWriter acout=response.getWriter();
-                acout.write(new UserController().addCollation(uid,acStart,acEnd,acRoute)+"");
+                acout.write(new UserController().addCollation(uid,acStart,acEnd,acRoute,acTotalTime,acTotalMoney)+"");
                 acout.flush();
                 acout.close();
                 break;
@@ -134,9 +136,11 @@ public class AnswerRequest extends HttpServlet {
                 String ahStart =request.getParameter("startPoi");
                 String ahEnd = request.getParameter("endPoi");
                 String ahRoute = request.getParameter("routeInfo");
-                String addHistory = ahStart+" "+ahEnd+" "+ahRoute;
+                String ahTotalTime = request.getParameter("totalTime");
+                String ahTotalMoney = request.getParameter("totalMoney");
+                String addHistory = ahStart+" "+ahEnd+" "+ahRoute+" "+ahTotalTime+" "+ahTotalMoney;
                 PrintWriter ahout=response.getWriter();
-                ahout.write(new UserController().addCollation(uid,ahStart,ahEnd,ahRoute)+"");
+                ahout.write(new UserController().addHistory(uid,ahStart,ahEnd,ahRoute,ahTotalTime,ahTotalMoney)+"");
                 ahout.flush();
                 ahout.close();
             case "addEvaluation":
