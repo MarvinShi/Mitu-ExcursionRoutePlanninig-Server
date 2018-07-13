@@ -69,12 +69,14 @@ public class AnswerRequest extends HttpServlet {
       // String sss=request.getAttribute("point").toString();
         String method=request.getParameter("method");
         switch (method) {
-            case "navigation":
+            case "navigation1":
             int pointSize = Integer.parseInt(request.getParameter("pointSize"));
             int exTime = Integer.parseInt(request.getParameter("time"));
             int exMoney = Integer.parseInt(request.getParameter("money"));
             int stMoney = Integer.parseInt(request.getParameter("stMoney"));
             int stTime = Integer.parseInt(request.getParameter("stTime"));
+            String startPoint =request.getParameter("startPoint");
+            String endPoint =request.getParameter("endPoint");
             String totalPOI = request.getParameter("poi");
             //  将totalPOI用空格进行切割
             Controller GAController = new Controller(pointSize, exTime, exMoney, stTime, stMoney, totalPOI);
@@ -84,15 +86,12 @@ public class AnswerRequest extends HttpServlet {
             for (int i = 0; i < routeList.size(); i++) {
                 ArrayList<Integer> idListOfRoute = routeList.get(i);
                 for (int j = 0; j < idListOfRoute.size(); j++) {
-                    resString = resString + idListOfRoute.get(j) + " ";
+                    resString = resString + idListOfRoute.get(j) + "+";
                 }
-                resString = resString + "+";
+
+                resString = resString + "#";
             }
-            //      System.out.println("22222222222222");
-            //       System.out.println(responseSt);
-            //      System.out.println(str);
             PrintWriter out = response.getWriter();
-            //      out.write(resString);
             out.write(resString);
             out.flush();
             out.close();
