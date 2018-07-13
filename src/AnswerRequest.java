@@ -18,7 +18,7 @@ import GA.UserController;
 public class AnswerRequest extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private int hitCount;
-    private int uid=1;
+    private int uid=0;
     public void init()
     {
     }
@@ -141,7 +141,7 @@ public class AnswerRequest extends HttpServlet {
                 String ahTotalMoney = request.getParameter("totalMoney");
                 String addHistory = ahStart+" "+ahEnd+" "+ahRoute+" "+ahTotalTime+" "+ahTotalMoney;
                 PrintWriter ahout=response.getWriter();
-                ahout.write(new UserController().addCollation(uid,ahStart,ahEnd,ahRoute,ahTotalTime,ahTotalMoney)+"");
+                ahout.write(new UserController().addHistory(uid,ahStart,ahEnd,ahRoute,ahTotalTime,ahTotalMoney)+"");
                 ahout.flush();
                 ahout.close();
             case "addEvaluation":
