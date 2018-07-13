@@ -26,9 +26,15 @@ public class UserController {
         else return -1;
     }
 
-    public int addCollation(int uid,String startpoi,String endpoi,String routeInfo)
+    public int addCollation(int uid,String startpoi,String endpoi,String routeInfo,String totalTime,String totalMoney)
     {
         int routeID=new UserDAO().getRouteID(startpoi,endpoi,routeInfo);
+        if(routeID==0)
+        {  new UserDAO().setNewPoiRoute(routeInfo);
+            int poiID=new UserDAO().getPoiID(routeInfo);
+           new UserDAO().setNewRoute(poiID,startpoi,endpoi,totalTime,totalMoney);
+           routeID=new UserDAO().getRouteID(startpoi,endpoi,routeInfo);
+        }
         int rs=new UserDAO().setNewCollection(uid,routeID);
         return rs;
     }
@@ -40,13 +46,18 @@ public class UserController {
         return new UserDAO().setNewEvaluation(uid,routeID,content);
     }
 
-    public int addHistory(int uid,String startpoi,String endpoi,String routeInfo)
+    public int addHistory(int uid,String startpoi,String endpoi,String routeInfo,String totalTime,String totalMoney)
     {
         int routeID=new UserDAO().getRouteID(startpoi,endpoi,routeInfo);
+        if(routeID==0)
+        {
+            new UserDAO().setNewPoiRoute(routeInfo);
+            int poiID=new UserDAO().getPoiID(routeInfo);
+            new UserDAO().setNewRoute(poiID,startpoi,endpoi,totalTime,totalMoney);
+            routeID = new UserDAO().getRouteID(startpoi,endpoi,routeInfo);
+        }
         int rs=new UserDAO().setNewCollection(uid,routeID);
-        if(rs==1)
-            return 1;
-        else return 0;
+        return rs;
     }
 
     public String getCollation(int uid)
